@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/content_margin">
+
+        <RatingBar
+            android:id="@+id/vote"
+            android:layout_width="wrap_content"
+            android:layout_height="13.3dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressDrawable="@drawable/ratingbar_cust"
+            android:rating="3.8"
+            android:stepSize="0.1" />
+
+        <TextView
+            android:id="@+id/otheruser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vote"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otheruser"
+            android:text="comment"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/vote"
+            android:layout_alignBottom="@+id/vote"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="Date"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

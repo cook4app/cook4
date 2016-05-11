@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Cook4</string>
+    <string name="cook4_url" translatable="false">https://cook4.ddns.net/services/</string>
+    <string name="facebook_app_id" translatable="false">12345</string>
+    <string name="facebook_content_provider" translatable="false">com.facebook.app.FacebookContentProvider12345</string>
+    <string name="map_api_key" translatable="false">ABCDEF</string>
+    <string name="places_api_key" translatable="false">ABCDEF</string>
+    <string name="gcm_sender_id" translatable="false">ABCDEF</string>
+    <string name="google_client_id" translatable="false">ABCDEF.apps.googleusercontent.com</string>
+
+</resources>

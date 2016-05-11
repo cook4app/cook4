@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="dist_array">
+        <item>&lt; 200 m</item>
+        <item>&lt; 500 m</item>
+        <item>&lt; 1 Km</item>
+        <item>&lt; 2 Km</item>
+        <item>&lt; 3 Km</item>
+        <item>&lt; 5 Km</item>
+        <item>&lt; 10 Km</item>
+    </string-array>
+
+    <array name="scorelevels">
+        <item>-10F</item>
+        <item>10F</item>
+        <item>20F</item>
+        <item>30F</item>
+        <item>50F</item>
+    </array>
+
+    <integer-array name="dist_meters">
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>10000</item>
+    </integer-array>
+
+    <string-array name="minnotice_array">
+        <item>0 min</item>
+        <item>15 min</item>
+        <item>30 min</item>
+        <item>45 min</item>
+        <item>1 hr</item>
+        <item>2 hrs</item>
+        <item>3 hrs</item>
+        <item>4 hrs</item>
+        <item>5 hrs</item>
+        <item>12 hrs</item>
+        <item>24 hrs</item>
+        <item>36 hrs</item>
+        <item>48 hrs</item>
+    </string-array>
+
+    <integer-array name="min_notices">
+        <item>0</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>240</item>
+        <item>300</item>
+        <item>720</item>
+        <item>1440</item>
+        <item>2160</item>
+        <item>2880</item>
+    </integer-array>
+
+    <string name="title_section1">Buy</string>
+    <string name="title_section2">Sell</string>
+    <string name="title_section3">Swaps</string>
+    <string name="title_section4">Transactions</string>
+
+    <string-array name="dayStrings">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+
+    <string-array name="nav_drawer_items">
+        <item>Profile</item>
+        <item>Top Cooks</item>
+        <item>Chats</item>
+        <item>Help</item>
+    </string-array>
+
+    <string-array name="scorelabels">
+        <item>Troll</item>
+        <item>Novice</item>
+        <item>Apprentice</item>
+        <item>Expert</item>
+        <item>Master</item>
+        <item>Chef C4</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>it</item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/profile</item>
+        <item>@drawable/hot</item>
+        <item>@drawable/chats</item>
+        <item>@drawable/help</item>
+    </array>
+
+
+    <string name="offers_near_you">Offers near you</string>
+    <string name="current_offers">Current offers</string>
+    <string name="registered_dishes">Registered dishes</string>
+    <string name="add_dish">Add a dish to offer!</string>
+    <string name="welcome_to_c4">Welcome to Cook4!</string>
+    <string name="you_go_buy">I collect</string>
+    <string name="they_come_buy">Delivered by cook</string>
+    <string name="you_go_sell">I will deliver</string>
+    <string name="they_come_sell">Users collect</string>
+    <string name="address_hint">Address (default = current location)</string>
+    <string name="address_details_hint">Address details (optional)</string>
+    <string name="ready_at">Ready at:</string>
+    <string name="time_hint">Time</string>
+    <string name="min_notice">min notice</string>
+    <string name="max_distance">max distance I\'ll walk</string>
+    <string name="max_portions">servings</string>
+    <string name="one_off">One off</string>
+    <string name="periodic">periodic</string>
+    <string name="date">Date</string>
+    <string name="to_hint">To</string>
+    <string name="type_your_msg_hint">Type your message</string>
+    <string name="portions">Quantity:</string>
+    <string name="buy_button">Buy!</string>
+    <string name="swap_button">Swap?</string>
+    <string name="accept_button">Accept!</string>
+    <string name="refuse_button">Refuse</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="latest_ratings_received">Latest ratings received</string>
+    <string name="dish_name_hint">Dish name</string>
+    <string name="pick_tags_hint">Pick tags</string>
+    <string name="insert_description_hint">Insert a description</string>
+    <string name="dish_pictures">Dish pictures (cover highlighted):</string>
+    <string name="save_dish_button">Save</string>
+    <string name="to_receive">To receive</string>
+    <string name="to_prepare">To prepare</string>
+    <string name="conversations">Conversations</string>
+    <string name="swaps_to_consider">Swaps to consider</string>
+    <string name="proposed_swaps">Proposed swaps</string>
+    <string name="user_info_button">User Info</string>
+    <string name="modify_name_button">Modify User Name</string>
+    <string name="logout_button">Log out</string>
+    <string name="general_rating">Reliability</string>
+    <string name="general_comments_hint">General comments</string>
+    <string name="food_not_received">Food not received</string>
+    <string name="food_rating">Food quality</string>
+    <string name="food_comments_hint">Food comments</string>
+    <string name="vote_button">Vote!</string>
+    <string name="login_with_google_button">Log in with Google</string>
+    <string name="login_with_fb_button">Log in with Facebook</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Log in</string>
+    <string name="signup_button">Sign up</string>
+    <string name="address_search_hint">Address</string>
+    <string name="search_button">Search</string>
+    <string name="pay_with_dish">Pay with one of your dishes!</string>
+    <string name="valid_until">Valid until:</string>
+    <string name="ready_at_hint">Ready at</string>
+    <string name="choose_dish">Choose a dish:</string>
+    <string name="propose_swap_button">Propose!</string>
+    <string name="global_top_cooks">Global Top Cooks</string>
+    <string name="latest_ratings_left">Latest ratings left</string>
+    <string name="username_hint">User Name</string>
+    <string name="repeat_pass_hint">Repeat password</string>
+    <string name="search_results">Search results</string>
+    <string name="dish_details">Dish details</string>
+    <string name="search_criteria">Search criteria</string>
+    <string name="title_activity_top_cooks">Top Cooks</string>
+    <string name="title_activity_pending_chats">Chats</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="pick_dish_swap_hint">Pick a dish to swap</string>
+    <string name="make_a_choice">Make a choice!</string>
+    <string name="introduce_yourself">Introduce yourself!</string>
+    <string name="error_insert_portions">You must insert a quantity</string>
+    <string name="error_choose_from_list">You must choose the address from the list</string>
+    <string name="no_comments_dish">No comments for this dish</string>
+    <string name="tags">Tags</string>
+    <string name="description">Description</string>
+    <string name="proposed_to">Proposed to</string>
+    <string name="proposed_by">Proposed by</string>
+    <string name="on">on</string>
+    <string name="today">today</string>
+    <string name="yesterday">yesterday</string>
+    <string name="tomorrow">tomorrow</string>
+    <string name="at_hour">at</string>
+    <string name="months">months</string>
+    <string name="month">month</string>
+    <string name="days">days</string>
+    <string name="day">day</string>
+    <string name="hours">hours</string>
+    <string name="hour">hour</string>
+    <string name="minutes">minutes</string>
+    <string name="minute">minute</string>
+    <string name="dish_ready">Dish ready</string>
+    <string name="tot_price_due">Total price due</string>
+    <string name="to_be_received_at">To be received at</string>
+    <string name="to_be_exchanged_with">To be exchanged with</string>
+    <string name="at_place">at</string>
+    <string name="to_be_picked_at">To be picked at</string>
+    <string name="to_be_delivered_at">To be delivered at</string>
+    <string name="to_be_picked_by_foodie">To be picked by the foodie at</string>
+    <string name="dish_at_distance">Dish at</string>
+    <string name="exchange_with">Exchange with</string>
+    <string name="to_take_place">to take place</string>
+    <string name="to_be_confirmed_before">To be confirmed before</string>
+    <string name="buy_with_delivery_summary">You will receive the dish at the selected address and time. For any queries, chat with the cook from the section \'Transactions\'!</string>
+    <string name="buy_with_delivery">Buy with delivery</string>
+    <string name="swap_with_del_summary">The exchange will take place at the selected address at the given time.</string>
+    <string name="swap_with_delivery">Exchange with delivery</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="buy_nodel_summary">You will need to go and pick your dish at the given time. The cook\'s address will be shown in the Pending transactions upon confirmation.</string>
+    <string name="buy_nodel">Buy without delivery</string>
+    <string name="swap_nodel_summary">The exchange will take place at the cook\'s place at the given time. The address will be shown upon confirmation.</string>
+    <string name="swap_nodel">Exchange without delivery</string>
+    <string name="confirming_transaction">Confirming transaction</string>
+    <string name="error_transaction">Problems in the transaction</string>
+    <string name="error_too_far">You are too far to be delivered this dish</string>
+    <string name="error_too_many_portions">Error. Probably too much quantity chosen.</string>
+    <string name="error_self_transaction">Error. You can\'t buy your own dish.</string>
+    <string name="error_no_offer">Error. The offer no longer exists.</string>
+    <string name="transaction_confirmed">Transaction confirmed!</string>
+    <string name="confirming_swap">Confirming swap</string>
+    <string name="swap_confirmed">Swap confirmed, check your pending transactions</string>
+    <string name="error_swap">Problems confirming swap</string>
+    <string name="portions_mismatch">Quantity mismatch</string>
+    <string name="you_are_exchanging">You are exchanging</string>
+    <string name="portions_of">portions of</string>
+    <string name="while_you_have_only">while you have only</string>
+    <string name="available_to_date_proceed">available for this date. Do you still want to proceed?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="wait">Wait</string>
+    <string name="removing_swap">Removing swap</string>
+    <string name="swap_removed">Swap removed</string>
+    <string name="problems_removing_swap">Problems removing swap</string>
+    <string name="error_self_swap">You cannot propose a swap to yourself</string>
+    <string name="walking_time">walking time</string>
+    <string name="type_message_first">Type a message first</string>
+    <string name="no_offers_available">No offers available</string>
+    <string name="no_votes">No votes</string>
+    <string name="NA">N.A.</string>
+    <string name="offer_no_longer_available">No longer available</string>
+    <string name="problems_downloading_offers">Problems downloading offers</string>
+    <string name="now">now</string>
+    <string name="from_now">from now</string>
+    <string name="every_weekdays">Every</string>
+    <string name="from_date">from</string>
+    <string name="to_date">to</string>
+    <string name="next_offer">Next offer</string>
+    <string name="chat_error">Can\'t send the message. The user does not exist or is banned.</string>
+    <string name="deleting_dish">Deleting dish</string>
+    <string name="dish_deleted">Dish deleted succesfully</string>
+    <string name="cant_delete_dish_transactions">Cannot delete dish, there are pending/unvoted transactions related to it</string>
+    <string name="problems_deleting_dish">Problems deleting dish</string>
+    <string name="deleting_offer">Deleting offer</string>
+    <string name="offer_deleted">Offer deleted succesfully</string>
+    <string name="problems_deleting_offer">Problems deleting offer</string>
+    <string name="make_offer_for">Make your offer for</string>
+    <string name="your_offer_for">Your offer for</string>
+    <string name="choose_delivery_option">You must choose a delivery option</string>
+    <string name="prices_not_complete">Prices are not complete</string>
+    <string name="insert_time_availability">You must insert a time of availability</string>
+    <string name="choose_start_date">You must choose a start date</string>
+    <string name="offerdate_past">The offer date cannot be in the past</string>
+    <string name="choose_end_date">You must choose an end date with a periodic schedule</string>
+    <string name="end_date_before_start">"The end date must be after the start date "</string>
+    <string name="enddate_past">The end date cannot be in the past</string>
+    <string name="insert_portions">You must insert the maximum quantity you are offering</string>
+    <string name="error_portions_positive">You must insert a positive quantity</string>
+    <string name="uploading_offer">Uploading offer</string>
+    <string name="no_future_offers">No offers in the future. Check the offering days.</string>
+    <string name="problems_offer_upload">Problems uploading offer.</string>
+    <string name="uploading_dish">Uploading dish</string>
+    <string name="dish_saved">Dish saved succesfully</string>
+    <string name="problems_dish_registration">Problems with dish registration</string>
+    <string name="insert_dish_name">Insert a name for your dish</string>
+    <string name="too_many_tags">Too many tags</string>
+    <string name="tag_chosen_already">Tag already chosen</string>
+    <string name="unread_messages">There are unread messages</string>
+    <string name="no_active_chats">No active chats</string>
+    <string name="no_dishes_to_receive">No dishes to receive</string>
+    <string name="no_dishes_to_prepare">No dishes to prepare</string>
+    <string name="portion">portion</string>
+    <string name="portions_pl">servings</string>
+    <string name="past_trans_vote">vote it!</string>
+    <string name="no_swaps_consider">No swaps to consider</string>
+    <string name="no_swaps_proposed">No swaps proposed</string>
+    <string name="get">Get</string>
+    <string name="in_exchange_for">in exchange for</string>
+    <string name="choose_profile_pic">Choose a Profile Picture</string>
+    <string name="change_user_name">Change User Name</string>
+    <string name="enter_new_username">Enter a new User Name</string>
+    <string name="tell_people_about_you">Tell people something about you!</string>
+    <string name="enter_description">Enter a short description</string>
+    <string name="logging_out">Logging out</string>
+    <string name="image_uploaded_successfully">Image uploaded successfully</string>
+    <string name="problems_uploading_image">Problems uploading the image</string>
+    <string name="image_deleted_successfully">Image deleted successfully</string>
+    <string name="problems_deleting_image">Problems deleting the image</string>
+    <string name="changing_username">Changing User Name</string>
+    <string name="username_changed_successfully">User name changed successfully</string>
+    <string name="problems_changing_username">Problems changing User Name</string>
+    <string name="changing_description">Changing User Description</string>
+    <string name="description_changed_successfully">User description changed successfully</string>
+    <string name="problems_changing_description">Problems changing user description</string>
+    <string name="food_quality_rating">Food quality rating</string>
+    <string name="evaluate">Evaluate</string>
+    <string name="for_recent_transaction">for your recent transaction!</string>
+    <string name="sending_rating">Sending rating</string>
+    <string name="problems_uploading_rating">Problems uploading rating</string>
+    <string name="rating_registered_successfully">Rating registered successfully!</string>
+    <string name="insert_valid_email">Please insert a valid email address</string>
+    <string name="insert_password">Please insert a password</string>
+    <string name="insert_username">Please insert a user name</string>
+    <string name="choose_password">Please choose a password</string>
+    <string name="repeat_password">Please repeat your password</string>
+    <string name="passwords_notequal">Passwords are not equal</string>
+    <string name="signing_up">Signing up</string>
+    <string name="signup_successful">Registration successful! Please confirm your email before logging in</string>
+    <string name="problems_signing_up">Problems signing up</string>
+    <string name="swap_your_place">If accepted, the exchange will take place at the address you indicated</string>
+    <string name="swap_cooks_place">At the address indicated by</string>
+    <string name="of">of</string>
+    <string name="against">against</string>
+    <string name="no_dishes_registered">No dishes registered</string>
+    <string name="select_dish_to_exchange">You must select a dish to offer in exchange</string>
+    <string name="sending_swap_proposal">Sending swap proposal</string>
+    <string name="proposal_uploaded_successfully">Proposal uploaded successfully. Check Pending Swaps</string>
+    <string name="problems_uploading_proposal">Problems uploading proposal</string>
+    <string name="too_late_swap">Too late to confirm the swap!</string>
+    <string name="date_not_available">Date not available</string>
+    <string name="validity_in_the_past">The validity date canot be in the past.</string>
+    <string name="location_not_available">Location not available.</string>
+    <string name="error_address">Could not retrieve the address.</string>
+    <string name="not_connected_retry">Not connected. Tap to retry!</string>
+    <string name="registering">Registering...</string>
+    <string name="location_not_active_search">We could not retrieve an address, you can insert one manually.</string>
+    <string name="insert_address">You need to insert an address.</string>
+    <string name="beta_warning">This is a Beta version, so the offers are not real. Feel free to buy and sell as you wish!</string>
+    <string name="city">City</string>
+    <string name="overall_reputation">Overall reputation</string>
+    <string name="cook_reputation">Cook reputation</string>
+    <string name="separation">Separation Level</string>
+    <string name="recommended_by">recommended by</string>
+    <string name="total_spent">Total spent</string>
+    <string name="total_earned">Total earned</string>
+    <string name="no_comments_received">No comments received</string>
+    <string name="no_comments_left">No comments left</string>
+    <string name="report_violation_dish">Report a violation for dish</string>
+    <string name="violation_more_details">Please give us some more details</string>
+    <string name="send">Send</string>
+    <string name="report_violation_user">Report a violation for user</string>
+    <string name="problems_downloading_userdata">Problems downloading user data</string>
+    <string name="no_cooks_found">No cooks found</string>
+    <string name="choose_date">Please choose a date</string>
+    <string name="date_past">The date cannot be in the past</string>
+    <string name="from">From</string>
+    <string name="OK">OK</string>
+    <string name="retrieving_location">Retrieving current location</string>
+    <string name="notification_newmessage">Cook4 - New Message Received</string>
+    <string name="user">User</string>
+    <string name="has_just_ordered">has just ordered</string>
+    <string name="click_details">Click to see the details</string>
+    <string name="notification_newtransaction">Cook4 - New Transaction</string>
+    <string name="has_cancelled_trans_dish">has just cancelled your pending transaction for dish</string>
+    <string name="notification_transcanc">Cook4 - Transaction cancelled</string>
+    <string name="has_proposed_exchange">has proposed you an exchange of</string>
+    <string name="notification_newswapprop">Cook4 - New Swap Proposal</string>
+    <string name="has_accepted_swap">has accepted your swap proposal</string>
+    <string name="notification_swapaccepted">Cook4 - Swap accepted!</string>
+    <string name="notification_upcomingtrans">You have upcoming transactions!</string>
+    <string name="new_dish_added">New dish added</string>
+    <string name="want_make_offer">Do you want to make an offer for</string>
+    <string name="delete">Delete</string>
+    <string name="sell_it">Sell it!</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="vote">Vote</string>
+    <string name="hint_monday">M</string>
+    <string name="hint_tuesday">T</string>
+    <string name="hint_wednesday">W</string>
+    <string name="hint_thursday">T</string>
+    <string name="hint_friday">F</string>
+    <string name="hint_saturday">S</string>
+    <string name="hint_sunday">S</string>
+    <string name="submit_offer">Submit</string>
+    <string name="press_again_exit">Press again to exit</string>
+    <string name="send_report">Send report</string>
+    <string name="report_sent">Report sent succesfully</string>
+    <string name="problems_report">Problems sending report</string>
+    <string name="sending_report">Sending report</string>
+    <string name="reliability">Reliability</string>
+    <string name="food_quality">Food quality</string>
+    <string name="cancel_transaction">Cancel transaction</string>
+    <string name="canceltrans_warning">Cancelling this transaction will affect your general rating. Do you want to proceed?</string>
+    <string name="canceltrans_norefund_warning">Cancelling this transaction will affect your general rating. Since the transaction date is in less than 24h, you will not be refunded. Do you want to proceed?</string>
+    <string name="canceltrans_cook_warning">Cancelling this transaction will affect your general rating. You will not receive the payment scheduled. Do you want to proceed?</string>
+    <string name="deleting_transaction">Deleting transaction</string>
+    <string name="transaction_deleted">Transaction deleted succesfully</string>
+    <string name="problems_del_trans">Problems deleting transaction</string>
+    <string name="cook">Cook</string>
+    <string name="foodie">Foodie</string>
+    <string name="transactions_to_date">transaction(s) to date</string>
+    <string name="selling_transactions">selling</string>
+    <string name="you_go_pick">You will go pick this order</string>
+    <string name="you_deliver">You will deliver this order</string>
+    <string name="foodie_comes">The foodie will come pick this order</string>
+    <string name="where">WHERE</string>
+    <string name="when">WHEN</string>
+    <string name="quantity_ordered">QUANTITY ORDERED</string>
+    <string name="price_due">PRICE DUE</string>
+    <string name="info">INFO</string>
+    <string name="no_comment_left">No comment left</string>
+    <string name="no_offers_made">No offers made yet</string>
+    <string name="walk">walk</string>
+    <string name="genrating_explanation">How was your interaction? What about punctuality, kindness and overall attitude?</string>
+    <string name="foodrating_explanation">Simply - how was the food?</string>
+    <string name="servings_sold">servings sold to date</string>
+    <string name="c4_desc">Homemade food sharing</string>
+    <string name="periodic_offer">Periodic offer</string>
+    <string name="price">Price</string>
+    <string name="free">Free</string>
+    <string name="pick_price">Pick a price!</string>
+    <string name="terms_conditions">Terms and Conditions</string>
+    <string name="only_vote_buy_swap">You can only vote the buying side of the swap</string>
+    <string name="only_vote_past">You can only vote past transactions</string>
+    <string name="accept_TC">I have read and accepted the Terms and Conditions</string>
+    <string name="error_accept_TC">Please read and accept the Terms and Conditions</string>
+    <string name="geolocation_problem">Geolocation problem</string>
+    <string name="troubles_finding_location">We\'re having troubles finding your position.</string>
+    <string name="location_settings">Settings</string>
+    <string name="manual_location">Manual</string>
+    <string name="internet_inactive">Internet connection is not active.</string>
+    <string name="retry">Retry</string>
+    <string name="exit">Exit</string>
+    <string name="confirm_delete_dish">Are you sure you want to delete this dish?</string>
+    <string name="delete_dish_hint">Dish deletion will also remove all the offers based on it.</string>
+    <string name="phone_number">Phone Number (ex. 3405499582)</string>
+    <string name="insert_phone">With external delivery, you need to insert a phone number</string>
+    <string name="buy_with_extdelivery_summary">You will be delivered the dish at the selected address and time by an external delivery service. Please allow for a delay of 20 minutes.</string>
+    <string name="ext_delivery_summary">An external service will deliver this order</string>
+    <string name="swap_bad_location">The cook only accepts swaps taking place at his location. Please change the delivery mode</string>
+    <string name="they_come_bike">Delivered via courier</string>
+    <string name="too_far_delivery">(Too far for delivery)</string>
+    <string name="not_allowed_sell">Do you want to sell your specialties on Cook4? Please tell us more about yourself and we\'ll get back to you!</string>
+    <string name="request_auth">Request authorization</string>
+    <string name="cook_auth_request">Cook Authorization Request</string>
+    <string name="choose_email">Choose an Email client:</string>
+    <string name="not_allowed_sell_short">You are not allowed to sell dishes</string>
+    <string name="locality">Locality</string>
+    <string name="payment_failed">Payment failed</string>
+    <string name="setup_paypal">Almost there! Please set up your PayPal account, then you\'ll be ready to start selling your dishes!</string>
+    <string name="paypal_set">PayPal account set successfully</string>
+    <string name="error_paypal_account">Error while setting PayPal account</string>
+    <string name="paypal_button">PayPal account</string>
+    <string name="paypal_selling">Your PayPal account for selling</string>
+    <string name="login_with_email_btn">Login with Email</string>
+    <string name="error_paypal_invalid">Error. The PayPal account appears to be invalid.</string>
+    <string name="back_to_login">Back to Login options</string>
+    <string name="check_internet">Problems in the registration. Check the Internet connection</string>
+    <string name="account_not_existing">The account does not exist</string>
+    <string name="account_no_pass">The account does not use password authentication</string>
+    <string name="password_incorrect">The password is not correct</string>
+    <string name="account_not_confirmed">The account has not been confirmed</string>
+    <string name="authentication_problem">Problems with the authentication</string>
+    <string name="error">Error</string>
+    <string name="error_banned">Impossible to connect. You have been banned</string>
+    <string name="update_app">You need to update the app</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="reset_password">Reset password</string>
+    <string name="suggest_previous_address">Use my last location</string>
+    <string name="swap_label">Swap</string>
+    <string name="remove_account">Remove account</string>
+    <string name="remove_account_warning">Are you sure that you want to delete your account? All your information will be lost.</string>
+    <string name="removing_account">Removing account</string>
+    <string name="account_removed_successfully">Account removed successfully</string>
+    <string name="problems_removing_account">Problems removing account</string>
+    <string name="cannot_remove_account_transactions">Cannot remove the account. You have pending transactions.</string>
+    <string name="comment_deleted_transaction">The user has deleted a confirmed transaction</string>
+    <string name="expires_in">Expires in</string>
+    <string name="set_paypal_before_selling">You need a PayPal account to sell your dishes.</string>
+    <string name="cook4_myself">I often cook for myself and my friends</string>
+    <string name="first_exp">1-2 years</string>
+    <string name="second_exp">2-5 years</string>
+    <string name="third_exp">5+ years</string>
+    <string name="diploma_details_hint">Please specify diploma details</string>
+    <string name="worked_food_industry">I worked in the food industry</string>
+    <string name="cooking_diploma">I have a cooking diploma</string>
+    <string name="diploma_details">Please give us some details on your diploma</string>
+    <string name="sending_auth_request">Sending authorization request</string>
+    <string name="problems_sending_request">Problems sending the request</string>
+    <string name="auth_request_sent">Request sent. We will get back to you shortly!</string>
+    <string name="pending_approval">Pending approval...</string>
+    <string name="become_cook">Become a cook!</string>
+    <string name="anything_else">Anything else?</string>
+    <string name="certified_cook">Certified cook</string>
+    <string name="amateur_cook">Amateur cook</string>
+    <string name="attended_amateur_classes">I attended amatorial cooking classes</string>
+    <string name="which_amateur_classes">Which ones?</string>
+    <string name="certified">Certified</string>
+    <string name="amateur">Amateur</string>
+    <string name="specify_courses">Please specify which courses you attended!</string>
+    <string name="empty_form">Empty form</string>
+    <string name="empty_form_confirm">The form is empty. Are you sure that you want to submit it?</string>
+    <string name="who_introduced_you">Who introduced you to Cook4?</string>
+
+</resources>

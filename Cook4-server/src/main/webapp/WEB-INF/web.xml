@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <filter>
+        <filter-name>MyApplication</filter-name>
+        <filter-class>org.glassfish.jersey.servlet.ServletContainer</filter-class>
+        <init-param>
+            <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <security-constraint>
+        <display-name>Admin</display-name>
+        <web-resource-collection>
+            <web-resource-name>Dashboard</web-resource-name>
+            <url-pattern>/dashboard.jsp</url-pattern>
+            <http-method>GET</http-method>           
+        </web-resource-collection>
+        <web-resource-collection>
+            <web-resource-name>Remove Comment</web-resource-name>
+            <url-pattern>/resources/cook4/removecomment/*</url-pattern>
+            <http-method>GET</http-method>           
+        </web-resource-collection>
+        <web-resource-collection>
+            <web-resource-name>Ban Dish</web-resource-name>
+            <url-pattern>/resources/cook4/bandish/*</url-pattern>
+            <http-method>GET</http-method>           
+        </web-resource-collection>
+        <web-resource-collection>
+            <web-resource-name>Ban User</web-resource-name>
+            <url-pattern>/resources/cook4/banuser/*</url-pattern>
+            <http-method>GET</http-method>           
+        </web-resource-collection>
+        <web-resource-collection>
+            <web-resource-name>Unban User</web-resource-name>
+            <url-pattern>/resources/cook4/unbanuser/*</url-pattern>
+            <http-method>GET</http-method>           
+        </web-resource-collection>
+        <web-resource-collection>
+            <web-resource-name>Set Delivery Points</web-resource-name>
+            <url-pattern>/resources/cook4/deliverypoint</url-pattern>
+            <http-method>GET</http-method>           
+        </web-resource-collection>
+        <web-resource-collection>
+            <web-resource-name>Set Privileges</web-resource-name>
+            <url-pattern>/resources/cook4/privilege</url-pattern>
+            <http-method>GET</http-method>           
+        </web-resource-collection>
+        
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>    
+    
+    <deny-uncovered-http-methods/>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>dashboard-realm</realm-name>
+    </login-config> 
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>resteasy.providers</param-name>
+        <param-value>org.glassfish.javaee.mobile.cook4server.DefaultExceptionHandler</param-value>
+    </context-param>
+
+</web-app>
+

@@ -1,0 +1,377 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="@dimen/corner_radius"
+                card_view:cardElevation="@dimen/card_elevation"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/titlecontainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/photocontainer"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:padding="@dimen/content_margin">
+
+                        <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/photo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/blankphoto"
+                            app:riv_corner_radius="30dip"
+                            app:riv_oval="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/alertcontainer"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/usercontainer">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bell" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/usercontainer"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/photocontainer"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/user_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/chatcontainer"
+                                android:padding="@dimen/content_margin"
+                                android:text="lala"
+                                android:textColor="@color/headers_text"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:id="@+id/chatcontainer"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/chat" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/userRole"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/content_margin" />
+
+                        <TextView
+                            android:id="@+id/user_description"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/content_margin" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="@dimen/corner_radius"
+                card_view:cardElevation="@dimen/card_elevation"
+                card_view:cardUseCompatPadding="true">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/content_margin"
+                    android:shrinkColumns="1"
+                    android:stretchColumns="0">
+
+                    <TableRow>
+
+                        <TextView
+                            android:padding="3dip"
+                            android:text="@string/reliability"
+                            android:textSize="12dp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="right">
+
+                            <RatingBar
+                                android:id="@+id/rating_general"
+                                android:layout_width="wrap_content"
+                                android:layout_height="13.3dp"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:progressDrawable="@drawable/ratingbar_cust"
+                                android:stepSize="0.1" />
+
+                            <TextView
+                                android:id="@+id/general_orders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/rating_general"
+                                android:layout_marginLeft="2dp"
+                                android:layout_toRightOf="@+id/rating_general"
+                                android:text="(2)"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:padding="3dip"
+                            android:text="@string/food_quality"
+                            android:textSize="12dp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="right">
+
+                            <RatingBar
+                                android:id="@+id/rating_food"
+                                android:layout_width="wrap_content"
+                                android:layout_height="13.3dp"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:progressDrawable="@drawable/ratingbar_cust"
+                                android:stepSize="0.1" />
+
+                            <TextView
+                                android:id="@+id/food_orders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/rating_food"
+                                android:layout_marginLeft="2dp"
+                                android:layout_toRightOf="@+id/rating_food"
+                                android:text="(2)"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:padding="3dip"
+                            android:text="@string/city"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/city"
+                            android:padding="3dip"
+                            android:textSize="12dp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/separation_row"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:padding="3dip"
+                            android:text="@string/separation"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/separation"
+                            android:padding="3dip"
+                            android:textSize="12dp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/totspent_row"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:padding="3dip"
+                            android:text="@string/total_spent"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/total_spent"
+                            android:padding="3dip"
+                            android:textSize="12dp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/totearned_row"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:padding="3dip"
+                            android:text="@string/total_earned"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/total_earned"
+                            android:padding="3dip"
+                            android:textSize="12dp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="@dimen/corner_radius"
+                card_view:cardElevation="@dimen/card_elevation"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/header_height">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/content_margin"
+                            android:text="@string/latest_ratings_received"
+                            android:textColor="@color/headers_text"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/headers_text" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/comments_received"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="@dimen/corner_radius"
+                card_view:cardElevation="@dimen/card_elevation"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/header_height">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/content_margin"
+                            android:text="@string/latest_ratings_left"
+                            android:textColor="@color/headers_text"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/headers_text" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/comments_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

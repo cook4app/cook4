@@ -1,0 +1,66 @@
+@args com.beppeben.cook4server.domain.Cook4Transaction trans, String sentTo
+
+<div style='vertical-align:baseline;font-size: 15px; font: 14px/23px Noto Sans;'>
+    <div style='padding:3%'> 
+        <div style='vertical-align:baseline;'> 
+            <h2><span style='color: #d91630;'>CONFERMA ACQUISTO SU COOK4</span></h2> 
+            @if(sentTo.equals("foodie")) {
+            <p>Congratulazioni per il nuovo acquisto su Cook4!</p> 
+            } else {
+            <p>L'utente @trans.getFoodieName() ha appena acquistato un tuo piatto su Cook4!</p> 
+            }           
+            <p>Di seguito i dettagli della transazione:</p> 
+            <div style='outline: 2px solid #222;width:500;float:left'>
+                <table> 
+                    <tbody> 
+                        <tr> 
+                            <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Id</strong></span></td> 
+                            <td style='padding: 7px 15px'>@trans.getId()</td> 
+                        </tr> 
+                        <tr> 
+                            <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Cuoco</strong></span></td> 
+                            <td style='padding: 7px 15px'>@trans.getCookName()
+                                @if(trans.getCook().getFiscalCode() != null) {
+                                <br>Codice fiscale: @trans.getCook().getFiscalCode()
+                                }                              
+                            </td>
+                        </tr> 
+                        <tr> 
+                            <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Acquirente</strong></span></td> 
+                            <td style='padding: 7px 15px'>@trans.getFoodieName()</td> 
+                        </tr> 
+                        <tr> 
+                            <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Piatto</strong></span></td> 
+                            <td style='padding: 7px 15px'>@trans.getDishName()<br>N. porzioni: @trans.getPortions()</td> 
+                        </tr> 
+                        <tr> 
+                            <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Prezzo</strong></span></td> 
+                            <td style='padding: 7px 15px'>@trans.getTotalPrice() @trans.getCurrency()</td> 
+                        </tr> 
+                        <tr> 
+                            <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Data ed ora</strong></span></td> 
+                            <td style='padding: 7px 15px'>@trans.formatDate()</td> 
+                        </tr> 
+                        <tr> 
+                            <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Luogo</strong></span></td> 
+                            <td style='padding: 7px 15px'>@trans.getDeliveryAddress(). @trans.getAddressDetails()</td> 
+                        </tr> 
+                    </tbody> 
+                </table>
+                <p style='padding: 7px 15px; font-size:70%'>Prestazione autonoma occasionale ai sensi dell'art. 81, comma 1, lettera L del DPR 917/86, fuori campo IVA ai sensi dell'art. 5, DPR n. 633/72 e successive modifiche e integrazioni.</p> 
+            </div>
+
+            @if(sentTo.equals("foodie")) {
+            <p>Trovi i dettagli dell'acquisto nella sezione 'Transazioni' della tua app. Da l&#236;, per qualsiasi chiarimento, puoi anche contattare il cuoco tramite la chat.</p> 
+            } else {
+            <p>Trovi i dettagli dell'acquisto nella sezione 'Transazioni' della tua app. Da l&#236;, per qualsiasi chiarimento, puoi anche contattare l'acquirente tramite la chat.</p> 
+            }
+            <p>Se ti servono altre informazioni, non esitare a scriverci a <span style='color: #d91630;'>hello@@cookapp.com</span>.</p> 
+            <p>Grazie per aver utilizzato Cook4.</p> 
+            <p>Con l'augurio di una splendida giornata,</p> 
+            <p>&nbsp;</p> 
+            <p>Il Team di Cook4<br> 
+                <a href='http://www.cook4app.com'><img class='alignnone wp-image-76' src='http://www.cook4app.com/wp-content/uploads/2015/12/C4-logo_black-1024x335.png' alt='C4 logo_black' width='116' height='38'></a></p> 
+        </div> 
+    </div> 
+</div>

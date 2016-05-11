@@ -1,0 +1,15 @@
+Cook4-server/target/
+Cook4-server/src/main/java/com/beppeben/cook4server/utils/Configs.java
+Cook4-server/src/main/resources/load-script.sql
+Cook4-server/src/main/resources/META-INF/persistence.xml
+Cook4-server/src/main/setup/glassfish-resources.xml
+Cook4-android/app/build/
+Cook4-android/build/
+Cook4-android/.gradle/
+Cook4-android/gradle/
+Cook4-android/.idea/
+Cook4-android/local.properties
+Cook4-android/app/src/main/res/values/config.xml
+*.iml
+*.log
+

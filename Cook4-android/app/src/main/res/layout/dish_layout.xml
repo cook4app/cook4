@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/menuview"
+            android:layout_toRightOf="@+id/photocontainer"
+            android:padding="@dimen/content_margin">
+
+            <TextView
+                android:id="@+id/dish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Spaghetti Carbonara"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="13.3dp"
+                android:layout_below="@id/dish"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressDrawable="@drawable/ratingbar_cust"
+                android:rating="0"
+                android:stepSize="0.1" />
+
+            <TextView
+                android:id="@+id/totorders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ratingbar"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/ratingbar"
+                android:text="(2)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ratingbar"
+                android:layout_marginBottom="3dp"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/photocontainer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/content_margin">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/blankphoto"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/menuview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/overflow" />
+
+    </RelativeLayout>
+
+</LinearLayout>

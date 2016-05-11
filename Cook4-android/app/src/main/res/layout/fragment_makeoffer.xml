@@ -1,0 +1,494 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/makeoffer_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_app"
+    android:clickable="true">
+
+    <ScrollView
+        android:id="@+id/scr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="@dimen/corner_radius"
+            card_view:cardElevation="@dimen/card_elevation"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/content_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/header_height">
+
+                    <TextView
+                        android:id="@+id/dishname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/content_margin"
+                        android:paddingRight="@dimen/content_margin"
+                        android:textColor="@color/headers_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/headers_text" />
+
+                </RelativeLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:shrinkColumns="1"
+                    android:stretchColumns="3">
+
+                    <TableRow android:padding="2dp">
+
+                        <CheckBox
+                            android:id="@+id/theyCome"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:button="@drawable/nodel_checkbox"
+                            android:checked="false" />
+
+                        <TextView
+                            android:id="@+id/theyComeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/they_come_sell"
+                            android:textSize="12dp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="20dp">
+
+                            <TextView
+                                android:id="@+id/price_theycome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:freezesText="true"
+                                android:hint="\@"
+                                android:textColor="@color/headers_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/currency_theycome_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toEndOf="@+id/price_theycome"
+                                android:layout_toRightOf="@+id/price_theycome"
+                                android:freezesText="true"
+                                android:textColor="@color/headers_text"
+                                android:textSize="12dp" />
+
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                    <TableRow android:padding="2dp">
+
+                        <CheckBox
+                            android:id="@+id/youGo"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:button="@drawable/del_checkbox"
+                            android:checked="false" />
+
+                        <TextView
+                            android:id="@+id/youGoText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/you_go_sell"
+                            android:textSize="12dp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="20dp">
+
+                            <TextView
+                                android:id="@+id/price_yougo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:freezesText="true"
+                                android:hint="\@"
+                                android:inputType="none"
+                                android:textColor="@color/headers_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/currency_yougo_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/price_yougo"
+                                android:freezesText="true"
+                                android:textColor="@color/headers_text"
+                                android:textSize="12dp" />
+
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shrinkColumns="1"
+                    android:stretchColumns="1">
+
+                    <TableRow android:padding="2dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/forks_red" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <Spinner
+                                android:id="@+id/max_portions"
+                                style="@android:style/Widget.Holo.Light.Spinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:minWidth="50dp"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/max_portions"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <TableRow android:padding="2dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/clock_red" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp">
+
+                                <EditText
+                                    android:id="@+id/oneoffDateText"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:editable="false"
+                                    android:gravity="center"
+                                    android:hint="@string/date"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:text="@string/at_hour"
+                                    android:textSize="12sp" />
+
+                                <EditText
+                                    android:id="@+id/timeText"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:gravity="center"
+                                    android:hint="@string/time_hint"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp">
+
+                                <Spinner
+                                    android:id="@+id/minNoticeText"
+                                    style="@android:style/Widget.Holo.Light.Spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/min_notice"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/address_row"
+                        android:padding="2dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/pin_red" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/address"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:hint="@string/address_hint"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/address_complement"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/address_details_hint"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/maxdist_row"
+                        android:padding="2dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/distance_red" />
+
+                        <LinearLayout
+                            android:id="@+id/maxdist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <Spinner
+                                android:id="@+id/max_distance"
+                                style="@android:style/Widget.Holo.Light.Spinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/max_distance"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <TableRow android:padding="2dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <CheckBox
+                                android:id="@+id/periodic_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:text="@string/periodic_offer" />
+
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/periodic_layout"
+                        android:padding="2dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/calendar" />
+
+                        <LinearLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/from_date" />
+
+                                <EditText
+                                    android:id="@+id/startDateText"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:editable="false"
+                                    android:gravity="center"
+                                    android:hint="@string/from"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/to_date" />
+
+                                <EditText
+                                    android:id="@+id/endDateText"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:editable="false"
+                                    android:gravity="center"
+                                    android:hint="@string/to_hint"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/days"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp">
+
+                                <ToggleButton
+                                    android:id="@+id/mon"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:textOff="@string/hint_monday"
+                                    android:textOn="@string/hint_monday"
+                                    android:textSize="14sp" />
+
+                                <ToggleButton
+                                    android:id="@+id/tue"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:textOff="@string/hint_tuesday"
+                                    android:textOn="@string/hint_tuesday"
+                                    android:textSize="14sp" />
+
+                                <ToggleButton
+                                    android:id="@+id/wed"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:textOff="@string/hint_wednesday"
+                                    android:textOn="@string/hint_wednesday"
+                                    android:textSize="14sp" />
+
+                                <ToggleButton
+                                    android:id="@+id/thu"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:textOff="@string/hint_thursday"
+                                    android:textOn="@string/hint_thursday"
+                                    android:textSize="14sp" />
+
+                                <ToggleButton
+                                    android:id="@+id/fri"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:textOff="@string/hint_friday"
+                                    android:textOn="@string/hint_friday"
+                                    android:textSize="14sp" />
+
+                                <ToggleButton
+                                    android:id="@+id/sat"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:textOff="@string/hint_saturday"
+                                    android:textOn="@string/hint_saturday"
+                                    android:textSize="14sp" />
+
+                                <ToggleButton
+                                    android:id="@+id/sun"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:textOff="@string/hint_sunday"
+                                    android:textOn="@string/hint_sunday"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <Button
+                    android:id="@+id/submit_offer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/submit_offer" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </ScrollView>
+
+</RelativeLayout>
+

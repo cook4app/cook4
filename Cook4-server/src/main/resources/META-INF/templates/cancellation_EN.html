@@ -1,0 +1,63 @@
+@args com.beppeben.cook4server.domain.Cook4Transaction trans, String originatedBy, String sentTo
+
+<div style='vertical-align:baseline;font-size: 15px; font: 14px/23px Noto Sans;'> 
+    <div style='padding:3%'> 
+        <div style='vertical-align:baseline;'> 
+            <h2><span style='color: #d91630;'>COOK4 ORDER CANCELLATION</span></h2> 
+            @if(sentTo.equals(originatedBy)) {
+            <p>Hi there, this is a confirmation of your recent cancellation of a transaction on Cook4.</p> 
+            } else {
+            <p>Hi there, we're sorry to inform you that one of your pending transactions on Cook4 has been cancelled.</p> 
+            } 
+            <p>Here are the transaction details:</p> 
+            <table style='height: 293px; outline: 2px solid #222;' width='500'> 
+                <tbody> 
+                    <tr> 
+                        <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Id</strong></span></td> 
+                        <td style='padding: 7px 15px'>@trans.getId()</td> 
+                    </tr> 
+                    <tr> 
+                        <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Cook</strong></span></td> 
+                        <td style='padding: 7px 15px'>@trans.getCookName()
+                            @if(trans.getCook().getFiscalCode() != null) {
+                            <br>Fiscal code: @trans.getCook().getFiscalCode()
+                            }                              
+                        </td>
+                    </tr> 
+                    <tr> 
+                        <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Buyer</strong></span></td> 
+                        <td style='padding: 7px 15px'>@trans.getFoodieName()</td> 
+                    </tr> 
+                    <tr> 
+                        <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Dish</strong></span></td> 
+                        <td style='padding: 7px 15px'>@trans.getDishName()<br>N. porzioni: @trans.getPortions()</td> 
+                    </tr> 
+                    <tr> 
+                        <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Prezzo</strong></span></td> 
+                        <td style='padding: 7px 15px'>@trans.getTotalPrice() @trans.getCurrency()</td> 
+                    </tr> 
+                    <tr> 
+                        <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Date and time</strong></span></td> 
+                        <td style='padding: 7px 15px'>@trans.formatDate()</td> 
+                    </tr> 
+                    <tr> 
+                        <td style='padding: 7px 15px'><span style='color: #d91630;'><strong>Location</strong></span></td> 
+                        <td style='padding: 7px 15px'>@trans.getDeliveryAddress(). @trans.getAddressDetails()</td> 
+                    </tr> 
+                </tbody> 
+            </table>
+            @if(sentTo.equals("foodie") && originatedBy.equals("foodie")) {               
+            <p>Let us remind you that, if your cancellation has occurred less than 24h to the delivery time, you will not be reimbursed, as per Cook4 rules.</p> 
+            } 
+            <p>If you require any futher information, do not hesitate to write us at <span style='color: #d91630;'>hello@@cookapp.com</span>.</p> 
+            <p>Thank you for using Cook4.</p> 
+            @if(!sentTo.equals(originatedBy)) {
+            <p>We deeply regret the inconvenience and hope to see you soon on Cook4.</p> 
+            }
+            <p>Wishing you a great day,</p> 
+            <p>&nbsp;</p> 
+            <p>The Cook4 Team<br> 
+                <a href='http://www.cook4app.com'><img class='alignnone wp-image-76' src='http://www.cook4app.com/wp-content/uploads/2015/12/C4-logo_black-1024x335.png' alt='C4 logo_black' width='116' height='38'></a></p> 
+        </div> 
+    </div> 
+</div>

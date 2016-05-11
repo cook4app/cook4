@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_app"
+    android:clickable="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="@dimen/corner_radius"
+                card_view:cardElevation="@dimen/card_elevation"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/content_margin">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/header_height">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/content_margin"
+                            android:text="@string/search_criteria"
+                            android:textColor="@color/headers_text"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/headers_text" />
+
+                    </RelativeLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:shrinkColumns="1"
+                        android:stretchColumns="1">
+
+                        <TableRow android:padding="2dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/pin_red" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/address"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:hint="@string/address_search_hint"
+                                android:textSize="12sp" />
+
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/dish_red" />
+
+                            <EditText
+                                android:id="@+id/dishName"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:hint="@string/dish_name_hint"
+                                android:textSize="12sp" />
+
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/tag_red" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="vertical">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autocompleteTags"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="@string/pick_tags_hint"
+                                    android:maxLines="1"
+                                    android:textSize="12sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/tagContainer"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="vertical" />
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/clock_red" />
+
+                            <LinearLayout
+                                android:id="@+id/timelayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp">
+
+                                <EditText
+                                    android:id="@+id/dateText"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:gravity="center"
+                                    android:hint="@string/date"
+                                    android:textSize="12sp" />
+
+                                <EditText
+                                    android:id="@+id/timeText"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:gravity="center"
+                                    android:hint="@string/ready_at_hint"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/search_button" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
