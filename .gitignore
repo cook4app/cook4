@@ -1,5 +1,4 @@
 Cook4-server/target/
-Cook4-server/src/main/java/com/beppeben/cook4server/utils/Configs.java
 Cook4-server/src/main/java/com/beppeben/cook4server/utils/test
 Cook4-server/src/main/resources/load-script.sql
 Cook4-server/src/main/resources/META-INF/persistence.xml
