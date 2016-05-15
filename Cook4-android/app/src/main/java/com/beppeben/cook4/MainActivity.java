@@ -52,7 +52,7 @@ import org.springframework.http.HttpHeaders;
 import java.util.List;
 
 
-public class MainActivity extends DrawerActivity implements 
+public class MainActivity extends DrawerActivity implements
         LocationListener, ViewPager.OnPageChangeListener, LoginFragment.TaskCallbacks {
 
     public Location location;
@@ -292,7 +292,8 @@ public class MainActivity extends DrawerActivity implements
 
     public void backToRoot() {
         try {
-            while (onBackPressed(false)) {}
+            while (onBackPressed(false)) {
+            }
         } catch (IllegalStateException ignored) {
             //trying to fix some bug here, may need to save state in the future
         }

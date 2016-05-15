@@ -1,8 +1,6 @@
 package com.beppeben.cook4.utils;
 
 import android.content.Context;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.util.Log;
 

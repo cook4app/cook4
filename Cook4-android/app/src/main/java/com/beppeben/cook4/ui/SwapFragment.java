@@ -40,7 +40,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 
@@ -108,6 +107,7 @@ public class SwapFragment extends MyFragment implements OnClickListener {
                 dish = dishes.get(position);
                 updateSummary();
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -124,6 +124,7 @@ public class SwapFragment extends MyFragment implements OnClickListener {
                 portions = ports.get(position);
                 updateSummary();
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -269,4 +270,4 @@ public class SwapFragment extends MyFragment implements OnClickListener {
     }
 
 }
-	
+

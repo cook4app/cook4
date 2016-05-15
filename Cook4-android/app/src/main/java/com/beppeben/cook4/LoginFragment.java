@@ -34,8 +34,11 @@ public class LoginFragment extends Fragment {
 
     public interface TaskCallbacks {
         void onPreExecute();
+
         void onProgressUpdate(int percent);
+
         void onCancelled();
+
         void onPostExecute(Object[] obj);
     }
 

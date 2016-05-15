@@ -342,7 +342,6 @@ public class ProfileFragment extends MyFragment implements OnClickListener, Conn
 
     @Override
     public void update(boolean redownload) {
-
     }
 
     @Override
@@ -352,7 +351,6 @@ public class ProfileFragment extends MyFragment implements OnClickListener, Conn
 
     @Override
     public void onConnectionSuspended(int i) {
-
     }
 
     @Override
@@ -549,7 +547,6 @@ public class ProfileFragment extends MyFragment implements OnClickListener, Conn
         }
     }
 
-
     public class ChangeDescriptionTask extends AsyncTask<Void, Void, String> {
 
         private final String LOG_TAG = ChangeNameTask.class.getName();
@@ -600,7 +597,6 @@ public class ProfileFragment extends MyFragment implements OnClickListener, Conn
             }
         }
     }
-
 
     public class RemoveAccountTask extends AsyncTask<Void, Void, String> {
 
